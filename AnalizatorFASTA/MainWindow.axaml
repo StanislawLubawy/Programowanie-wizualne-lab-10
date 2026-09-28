@@ -1,9 +1,52 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:oxy="http://oxyplot.org/avalonia"
+		xmlns:local="clr-namespace:AnalizatorFASTA"
         x:Class="AnalizatorFASTA.MainWindow"
-        Title="AnalizatorFASTA">
-    Welcome to Avalonia!
+        Title="Analizator FASTA" Width="1000" Height="700">
+	
+	<Grid RowDefinitions="Auto, *, 300">
+		
+		<StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="10" Margin="10">
+			<Button Content="Wczytaj pliki FASTA" Click="OnLoadFastaClick" Background="#007ACC" Foreground="White" />
+			<Button Content="Eksportuj do CSV" Click="OnExportCsvClick" />
+			<Button Content="Eksportuj do JSON" Click="OnExportJsonClick" />
+			<TextBlock Name="TxtStatus" VerticalAlignment="Center" Foreground="Green" Margin="10,0,0,0"/>
+		</StackPanel>
+
+		<Grid Grid.Row="1" ColumnDefinitions="300, *">
+			
+			<Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Margin="10">
+				<ListBox Name="SequenceListBox" SelectionChanged="OnSequenceSelected">
+					<ListBox.ItemTemplate>
+						<DataTemplate x:DataType="local:FastaSequence">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="0,0,5,0"/>
+								<TextBlock Text="{Binding Length, StringFormat='({0} bp)'}" Foreground="Gray"/>
+							</StackPanel>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</Border>
+
+			<StackPanel Grid.Column="1" Margin="20" Spacing="10">
+				<TextBlock Text="Szczegóły sekwencji:" FontSize="18" FontWeight="Bold"/>
+				<TextBlock Name="TxtSeqName" FontSize="16" />
+				<TextBlock Name="TxtSeqLength" FontSize="14" />
+				<TextBlock Name="TxtGCContent" FontSize="14" />
+				<TextBlock Name="TxtCodons" FontSize="14" />
+				
+				<TextBlock Text="Wystąpienia zasad:" FontWeight="Bold" Margin="0,10,0,0"/>
+				<TextBlock Name="TxtCountA" />
+				<TextBlock Name="TxtCountT" />
+				<TextBlock Name="TxtCountG" />
+				<TextBlock Name="TxtCountC" />
+			</StackPanel>
+		</Grid>
+
+		<Border Grid.Row="2" BorderBrush="Gray" BorderThickness="1" Margin="10">
+			<oxy:PlotView Name="MyPlot" Background="Transparent"/>
+		</Border>
+		
+	</Grid>
 </Window>

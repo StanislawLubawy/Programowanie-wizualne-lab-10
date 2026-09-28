@@ -1,0 +1,86 @@
+[
+  {
+    "Header": "seq1 Homo sapiens fragment",
+    "Sequence": "ATGCCGTAGCTAGCTAGCTA",
+    "Name": "seq1",
+    "Length": 20,
+    "CountA": 5,
+    "CountT": 5,
+    "CountG": 5,
+    "CountC": 5,
+    "GCContent": 50.0,
+    "CodonCount": 6
+  },
+  {
+    "Header": "seq2 Mus musculus fragment",
+    "Sequence": "ATGCGCGATCGATCGATCGC",
+    "Name": "seq2",
+    "Length": 20,
+    "CountA": 4,
+    "CountT": 4,
+    "CountG": 6,
+    "CountC": 6,
+    "GCContent": 60.0,
+    "CodonCount": 6
+  },
+  {
+    "Header": "Seq3_Homo_sapiens_gen_A (normalna sekwencja)",
+    "Sequence": "ATGCGTACGTAGCTAGCTAGCTGACTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG",
+    "Name": "Seq3_Homo_sapiens_gen_A",
+    "Length": 100,
+    "CountA": 25,
+    "CountT": 25,
+    "CountG": 26,
+    "CountC": 24,
+    "GCContent": 50.0,
+    "CodonCount": 33
+  },
+  {
+    "Header": "Seq4_Mus_musculus_gen_B (wysoka zawartość GC)",
+    "Sequence": "GCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCCGCCGCCGGCGCGCGCCGTAGCGCGCGCGCGCCGCC",
+    "Name": "Seq4_Mus_musculus_gen_B",
+    "Length": 98,
+    "CountA": 1,
+    "CountT": 1,
+    "CountG": 46,
+    "CountC": 50,
+    "GCContent": 97.96,
+    "CodonCount": 32
+  },
+  {
+    "Header": "Seq5_E_coli_promoter (wysoka zawartość AT)",
+    "Sequence": "TTAAATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATAAATTTTAAATTATATAGCTATATATATA",
+    "Name": "Seq5_E_coli_promoter",
+    "Length": 95,
+    "CountA": 47,
+    "CountT": 46,
+    "CountG": 1,
+    "CountC": 1,
+    "GCContent": 2.11,
+    "CodonCount": 31
+  },
+  {
+    "Header": "Seq6_Saccharomyces_cerevisiae (krótka sekwencja)",
+    "Sequence": "GATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATC",
+    "Name": "Seq6_Saccharomyces_cerevisiae",
+    "Length": 64,
+    "CountA": 16,
+    "CountT": 16,
+    "CountG": 16,
+    "CountC": 16,
+    "GCContent": 50.0,
+    "CodonCount": 21
+  },
+  {
+    "Header": "Seq7_Drosophila_melanogaster (długa sekwencja)",
+    "Sequence": "ATGCCGTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGATCGATCGATCGATCGATCGATCGATCGATC",
+    "Name": "Seq7_Drosophila_melanogaster",
+    "Length": 212,
+    "CountA": 53,
+    "CountT": 53,
+    "CountG": 53,
+    "CountC": 53,
+    "GCContent": 50.0,
+    "CodonCount": 70
+  }
+]
